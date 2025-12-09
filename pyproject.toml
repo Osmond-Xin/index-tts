@@ -52,10 +52,13 @@ dependencies = [
   "tensorboard==2.9.1",
   "textstat>=0.7.10",
   "tokenizers==0.21.0",
-  "torch==2.8.*",
-  "torchaudio==2.8.*",
+  
+  # --- 修改开始：解决 Torch 版本冲突 ---
+  "torch>=2.1.0",
+  "torchaudio>=2.1.0",
   "tqdm>=4.67.1",
-  "transformers==4.52.1",
+  "transformers>=4.40.0",
+  # --- 修改结束 ---
 
   # Use "wetext" on Windows/Mac, otherwise "WeTextProcessing" on Linux.
   "wetext>=0.0.9; sys_platform != 'linux'",
